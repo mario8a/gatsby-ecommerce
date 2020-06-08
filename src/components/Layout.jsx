@@ -6,8 +6,8 @@ export default (props) => {
     return(
         <Fragment>
             <SEO/>
-            <main>
-                <Nav/>
+            <Nav/>
+            <main className="max-w-4xl mx-auto">
                 {props.children}
             </main>
         </Fragment>
@@ -16,6 +16,10 @@ export default (props) => {
 
 /**props.children es un arreglo con todos los elementos hijos
  * del componente que se esta creando
+ */
+
+/**mx-auto agrega margen a todos los lados
+ * max-w-4xl ancho maximo
  */
 
 
