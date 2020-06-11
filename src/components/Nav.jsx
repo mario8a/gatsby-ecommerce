@@ -14,8 +14,8 @@ const navItems = [
 export default (props) => {
     return(
         <header className="bg-blue-900 text-blue-100 shadow-md">
-            <nav>
-                <ul className="flex">
+            <nav className="flex">
+                <ul className="flex flex-1">
                     {
                         navItems.map((item,index)=>(
                              <li key={index}>
@@ -28,6 +28,9 @@ export default (props) => {
                         ))
                     }
                 </ul>
+                <Link to="/carrito" className="hover:bg-blue-800 bg-blue-500 px-6 inline-block py-4"> 
+                    {props.shopping_cart.length} 
+                </Link>
             </nav>
         </header>
     )

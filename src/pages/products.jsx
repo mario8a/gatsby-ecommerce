@@ -22,6 +22,7 @@ export const pageQuery = graphql`
           nodes {
            id
            name
+           slug
         }
       }
     }
