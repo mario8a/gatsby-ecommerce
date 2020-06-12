@@ -4,9 +4,12 @@ import Price from './Price';
 export default ({shoppingCart}) => {
     //PROBLEMA TENGO UN OBJETO CON DOS OBJETOS DENTROS
 
-    const total = shoppingCart.reduce(
-        (total, product)=> (product.prunit_amountice * product.quantity) + total
-      , 0)
+    const cantidad =  shoppingCart.map(({sku}) => sku.unit_amount);
+
+    const total = cantidad.reduce(
+        (total, producto) => producto + total
+    , 0);
+
     return(
         <div>
             <p className="uppercase text-white">Total</p>
