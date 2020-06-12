@@ -3,6 +3,7 @@ import Price from './Price';
 import AddToCartConnected from './AddToCartConnected';
 
 export default ({producto, skus}) => {
+    // console.log("producto", producto)
     const sku = skus[0];
     return(
         <article className="card">
@@ -29,6 +30,7 @@ export default ({producto, skus}) => {
                 <h1 className="text-3xl uppercase mb-4"> {producto.name} </h1>
                 <AddToCartConnected
                     sku={sku}
+                    producto={producto}
                 />
             </div>
         </article>
