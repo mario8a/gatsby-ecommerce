@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
+
+import { IoMdCart } from 'react-icons/io';
+import { IconContext } from "react-icons";
+
 const navItems = [
     {
         caption: 'Home',
@@ -29,7 +33,10 @@ export default (props) => {
                     }
                 </ul>
                 <Link to="/carrito" className="hover:bg-blue-800 bg-blue-500 px-6 inline-block py-4"> 
-                    {props.shopping_cart.length} 
+                    <IconContext.Provider value={{className:"inline-block mr-2 text-xl"}}>
+                        <IoMdCart/>
+                    </IconContext.Provider>
+                      {props.shopping_cart.length} 
                 </Link>
             </nav>
         </header>
